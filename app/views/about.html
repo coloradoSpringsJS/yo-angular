@@ -1,0 +1,15 @@
+
+<h1>About coloradoSprings.js</h1>
+
+<input type="text" ng-model="membersearch">
+<div class="row">
+  <div class="col-xs-6 col-md-3" 
+    ng-repeat="result in members.results | filter:membersearch" 
+    ng-if="result.photo.thumb_link">
+    <span >
+      <a href="#" class="thumbnail">
+        <img src="{{result.photo.thumb_link}}">
+      </a>
+    </span>
+  </div>
+</div>
